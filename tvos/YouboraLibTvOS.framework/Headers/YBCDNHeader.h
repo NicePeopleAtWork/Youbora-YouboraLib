@@ -15,7 +15,9 @@
 typedef enum {
     kHeaderHost,
     kHeaderType,
-    kHeaderHostAndType
+    kHeaderHostAndType,
+    kHeaderTypeAndHost,
+    kHeaderNone
 } HeaderType;
 
 /**

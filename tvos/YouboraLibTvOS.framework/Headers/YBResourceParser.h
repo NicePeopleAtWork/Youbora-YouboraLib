@@ -13,6 +13,7 @@ extern NSString * _Nonnull const CDN_AKAMAI;
 extern NSString * _Nonnull const CDN_LEVEL3;
 extern NSString * _Nonnull const CDN_HIGHWINDS;
 extern NSString * _Nonnull const CDN_FASTLY;
+extern NSString * _Nonnull const CDN_CUSTOM;
 
 @class YBViewManager;
 
@@ -39,6 +40,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// Code of the Node Host type after parsing it
 @property (readonly, strong) NSString * _Nullable nodeType;
+
+/// CDN Name after parsing
+@property (readonly, strong) NSString * cdnCode;
 
 /// Array of available CDN names to try to match against. Originally this has the CDNs defined as constants.
 //@property (nonatomic, strong) NSMutableArray <NSString *> * _Nullable cdnsEnabled;
