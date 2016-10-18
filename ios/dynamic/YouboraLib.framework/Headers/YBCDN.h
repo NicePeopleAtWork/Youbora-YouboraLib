@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "YBCDNHeader.h"
 
-typedef NSString * _Nullable (^YBCDNInfoListener) (NSDictionary * responseHeaders, NSString * cdnHeader);
+typedef NSString * _Nullable (^YBCDNInfoListener) (NSDictionary * _Nullable responseHeaders, NSString * _Nullable cdnHeader);
 
 
 /**
@@ -28,14 +28,14 @@ typedef NSString * _Nullable (^YBCDNInfoListener) (NSDictionary * responseHeader
  * @param code NSString representing the cdn name or code
  * @param requestHeaders NSDictionary containing key-value entries to send as http headers when performing the http head requests to get info about the CDN.
  */
-- (instancetype)initWithHeaders:(NSArray <YBCDNHeader *> *) headers code:(NSString *) code andRequestHeaders:(NSDictionary <NSString *, NSString *> *) requestHeaders;
+- (_Nonnull instancetype)initWithHeaders:(NSArray <YBCDNHeader *> * _Nullable) headers code:(NSString * _Nullable) code andRequestHeaders:(NSDictionary <NSString *, NSString *> * _Nullable) requestHeaders;
 
 /// <YBCDNHeader> instances tell us what and how to extract from the headers in the http head responses.
-@property (nonatomic, strong) NSArray <YBCDNHeader *> * headers;
+@property (nonatomic, strong) NSArray <YBCDNHeader *> * _Nullable headers;
 /// Key-value entries to send as http headers when performing the http head requests to get info about the CDN.
-@property (nonatomic, strong) NSDictionary <NSString *, NSString *> * requestHeaders;
+@property (nonatomic, strong) NSDictionary <NSString *, NSString *> * _Nullable requestHeaders;
 /// CDN code
-@property (nonatomic, strong) NSString * code;
+@property (nonatomic, strong) NSString * _Nullable code;
 /// CDN Info listener callback
 @property (nonatomic, copy) YBCDNInfoListener _Nullable cdnInfoListener;
 
