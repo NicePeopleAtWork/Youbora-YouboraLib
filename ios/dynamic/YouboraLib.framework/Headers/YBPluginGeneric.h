@@ -187,6 +187,11 @@
  */
 - (void) ignoredAdHandler;
 /**
+ * This method is called when YBBackgroundEvent notification is fired.
+ * The plugin will send stop event
+ */
+- (void) eventListenerDidReceivetoBack:(NSNotification*)uselessNotification;
+/**
  * @returns <YBOptions>'s inner NSDictionary
  */
 - (NSMutableDictionary *) getOptions;

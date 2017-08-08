@@ -22,7 +22,7 @@ extern NSString * const kOptionsKeyNormalizeUserAgent;
  *  - data: (NSData *) the data as returned by the completionHandler.
  *  - response: (NSURLResponse *) the response as returned by the completionHandler.
  */
-typedef void (^YBRequestSuccessBlock) (NSData * _Nullable data, NSURLResponse * _Nullable response);
+typedef void (^YBRequestSuccessBlock) (NSData * _Nullable data,NSURLResponse * _Nullable response);
 
 /** 
  * Type of the error block
@@ -36,7 +36,7 @@ typedef void (^YBRequestErrorBlock) (NSError * _Nullable error);
  * This class encapsulates the http requests. It performs as an inferface against the system http calls.
  * YBRequests are highly customizable via the params property and the <setSuccessListener:> and <setErrorListener:> methods.
  */
-@interface YBRequest : NSObject
+@interface YBRequest : NSObject<NSURLSessionDataDelegate>
 
 /// ---------------------------------
 /// @name Public properties
