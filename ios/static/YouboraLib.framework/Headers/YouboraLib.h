@@ -16,7 +16,7 @@ FOUNDATION_EXPORT const unsigned char YouboraLibVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <YouboraLib/PublicHeader.h>
 
-#import <YouboraLib/YBAdnalyzerGeneric.h>
+#import <YouboraLib/YBAdnalyzerGeneric.h> 
 #import <YouboraLib/YBViewManager.h>
 #import <YouboraLib/YBInfoManager.h>
 #import <YouboraLib/YBCDN.h>

@@ -192,6 +192,10 @@
  */
 - (void) eventListenerDidReceivetoBack:(NSNotification*)uselessNotification;
 /**
+ * Just a method to change the player in case that has became nil
+ */
+- (void) setNewPlayer:(NSObject *)player;
+/**
  * @returns <YBOptions>'s inner NSDictionary
  */
 - (NSMutableDictionary *) getOptions;
