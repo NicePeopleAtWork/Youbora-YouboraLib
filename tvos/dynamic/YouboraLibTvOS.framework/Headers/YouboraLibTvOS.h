@@ -31,3 +31,4 @@ FOUNDATION_EXPORT const unsigned char YouboraLibTvOSVersionString[];
 #import <YouboraLibTvOS/YBLog.h>
 #import <YouboraLibTvOS/YBChrono.h>
 #import <YouboraLibTvOS/YBTimer.h>
+#import <YouboraLibTvOS/YBDeviceInfo.h>

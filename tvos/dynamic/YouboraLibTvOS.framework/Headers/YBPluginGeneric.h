@@ -138,6 +138,10 @@
  */
 - (void) endedHandler;
 /**
+ * This method is used when a view is going to be casted to chromecast (it will avoid and EBVS in youbora)
+ */
+- (void) castedHandler;
+/**
  * Convenience method to call <errorHandlerWithMessage:message:andErrorMetadata:> with no metadata.
  * @param msg Error message and code (the same string will be sent in both fields)
  * @warning use this method only when you cannot get the code or the message.

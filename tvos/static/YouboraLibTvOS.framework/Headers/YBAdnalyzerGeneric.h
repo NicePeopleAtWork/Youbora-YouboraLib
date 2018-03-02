@@ -129,6 +129,11 @@
 - (void) skipAdHandler;
 
 /**
+ * This function must be called when the ad has been clicked.
+ */
+- (void) clickAdHandler;
+
+/**
  * This function must be called when the ad starts a buffer underrun.
  */
 - (void) bufferingAdHandler;

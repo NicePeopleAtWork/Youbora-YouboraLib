@@ -8,7 +8,7 @@
 
 #import "YBRequest.h"
 
-@class YBChrono, YBCommunication, YBInfoManager, YBResourceParser;
+@class YBChrono, YBCommunication, YBInfoManager, YBResourceParser, YBDeviceInfo;
 /**
  * Class that manages all the view-related events, logic and info. Any Youbora event is
  * sent by this class. It has the flags that represent the view status and a set of
@@ -342,6 +342,23 @@ NS_ASSUME_NONNULL_BEGIN
  * @param callback Callback to invoke on success.
  */
 - (void) sendAdPauseWithParams:(NSDictionary *) params andCallback:(_Nullable YBRequestSuccessBlock) callback;
+/**
+ * Convenience method to call <sendAdClickWithParams:andCallback:> with neither params nor callback.
+ */
+- (void) sendAdClick;
+/**
+ * Convenience method to call <sendAdClickWithParams:andCallback:> with no callback.
+ * @param params NSDictionary to perform the call.
+ */
+- (void) sendAdClickWithParams:(NSDictionary *) params;
+/**
+ * Fetch the required info and send the /adClick event.
+ *
+ * This method checks and updates the class flags if necessary.
+ * @param params NSDictionary of params to perform the request.
+ * @param callback Callback to invoke on success.
+ */
+- (void) sendAdClickWithParams:(NSDictionary *) params andCallback:(_Nullable YBRequestSuccessBlock) callback;
 /**
  * Convenience method to call <sendAdResumeWithParams:andCallback:> with neither params nor callback.
  */
